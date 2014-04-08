@@ -1,0 +1,18 @@
+Martin Atelier's make file
+
+to get it to work:
+had to change arduino install directory in perl program
+had to change specify ARD_PORT manually and delete line in makefile
+  this caused a problem using stty where it had no port name
+
+basics: make your own makefile that includes Arduino.mk 
+remember to add to ARD_LIBS when adding libraries
+  may need to add includes manually in sketch this way?
+
+seems like includes are added manually. Right now I'm adding absolute paths.
+
+
+TODO:
+  consider configuration struct instead of scattered globals.
+  consider baud rate negotiation or setting correctly at startup.
+  errors may need to flush both sides buffers and start a resync sequence.
